@@ -6,6 +6,7 @@
 </head>
 <body>
 	<h1>Demo WebSocket</h1>
+	<input onclick="disconnect()" value="Send Message" type="button" /> <br/><br/>
     <input id="textMessage" type="text" />
     <input onclick="sendMessage()" value="Send Message" type="button" /> <br/><br/>
     
@@ -35,6 +36,9 @@
           textMessage.value = "";
         }
       }
+      function disconnect() {
+    	  websocket.close()
+	}
     </script>
 </body>
 </html>
